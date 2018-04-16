@@ -208,8 +208,6 @@
       <div class="col-md-2 text-lg text-right">${{ (rewardsTotal * .35 ).toLocaleString('en-US')  }} </div>
     </div>
 
-    
-  <button id="show-modal" @click="showModal = true">Show Modal</button>
     <div v-if="showModal" >
         <div class="modal-mask " >
           <div class="modal-wrapper">
