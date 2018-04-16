@@ -323,7 +323,7 @@ export default {
      }
 
      setTimeout( function(){
-       vm.showModal =  true 
+     //  vm.showModal =  true 
      }, 5000)
 
       $('html, body').animate({
