@@ -2,7 +2,8 @@
   <div class="container">
     <div class="row padded-14">
       <a href="http://herbert-saladar.com/" class="text-center" style="width:100%">
-        <div  style="background:url(/images/me-gray.png)  no-repeat; width:90px; height: 90px; background-size:cover; border-radius:100px; background-position: -14px; margin: 0 auto"></div>
+        <div  style="background:url(/images/me-gray.png)  no-repeat; width:90px; height: 90px; background-size:cover; border-radius:100px; background-position: -14px;" class="float-left"></div>
+        <img src="/images/logo-airbit.png" alt="float-right" width="90px;">
       </a>
     </div>
     <div class="row padded-14">
