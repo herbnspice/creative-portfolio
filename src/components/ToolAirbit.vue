@@ -1,12 +1,12 @@
 <template>
   <div class="container">
     <div class="row padded-14">
-      <div class="col-md-6"> 
+      <div class="col-6 col-sm-4"> 
         <a href="http://herbert-saladar.com/" targe="_blank" class="float-left" style="width:100%">
           <div  style="background:url(/images/me-gray.png)  no-repeat; width:90px; height: 90px; background-size:cover; border-radius:100px; background-position: -14px;"></div>
         </a>
       </div>
-      <div class="col-md-6"> 
+      <div class="col-6 col-sm-4"> 
         <a href="https://www.bitbackoffice.com/" targe="_blank" class="float-right">
             <img src="/images/logo-airbit.png" class="float-right" width="90px;">
         </a>
