@@ -1,6 +1,11 @@
 <template>
   <div class="container">
     <div class="row padded-14">
+      <a href="http://herbert-saladar.com/" class="text-center" style="width:100%">
+        <div  style="background:url(/images/me-gray.png)  no-repeat; width:90px; height: 90px; background-size:cover; border-radius:100px; background-position: -14px; margin: 0 auto"></div>
+      </a>
+    </div>
+    <div class="row padded-14">
       <div class="col-md-12 warning text-center text-lg margin-bottom padded" >
           Disclaimer: This tool is only for demo and reference, all values are speculative, figures does not represent actual values.
       </div>
@@ -111,7 +116,7 @@
         </div>
         <div class="row padded-14 total-income">
           <div class="col-md-12 padded-top bordered">
-            <h4 class="float-right"> Total Income ${{ parseFloat( ( rewardsTotal - ( rewardsTotal * .35 ) )* numberOfAccounts ).toLocaleString('en-US') }}</h4>
+            <h5 class="float-right"> Total Income ${{ parseFloat( ( rewardsTotal - ( rewardsTotal * .35 ) )* numberOfAccounts ).toLocaleString('en-US') }}</h5>
           </div>
          </div>
       </div>
