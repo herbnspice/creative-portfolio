@@ -95,25 +95,39 @@
                         </div>
                         <div class="row" >
                             <div class="col-md-4 text-center client">
-                                <img src="/images/logo-virgin-mobile-mexico.png" alt="" style="margin-top: 40px;">
+                                <a href="http://virginmobile.mx/" targe="_blank">
+                                    <img src="/images/logo-virgin-mobile-mexico.png" alt="" style="margin-top: 40px;">
+                                </a>
                             </div>
                             <div class="col-md-4 text-center client">
-                                 <img src="/images/logo-manaty.png" alt="">
+                                <a href="http://manaty.net/" targe="_blank">
+                                     <img src="/images/logo-manaty.png" alt="">
+                                </a>
                             </div>
                             <div class="col-md-4 text-center client" >
-                                 <img src="/images/logo-lwa.png" alt="" width="250px">
+                                <a href="http://letswanderaround.com/"  targe="_blank">
+                                    <img src="/images/logo-lwa.png" alt="" width="250px">
+                                </a>
                             </div>
                             <div class="col-md-3 text-center client">
-                                <img src="/images/logo-socialdraft.png" alt="" style="margin-top: 35px;" width="150px">
+                                <a href="http://socialdraft.com/"  targe="_blank">
+                                    <img src="/images/logo-socialdraft.png" alt="" style="margin-top: 35px;" width="150px">
+                                </a>
                             </div>
                             <div class="col-md-3 text-center client">
-                                <img src="/images/logo-maitres.png" alt="" width="200px">
+                                <a href="http://mcf-usa.com"  targe="_blank">
+                                    <img src="/images/logo-maitres.png" alt="" width="200px">
+                                </a>
                             </div>
                             <div class="col-md-3 text-center client">
-                                <img src="/images/logo-friendseat.png" alt="" style="margin-top: 40px;" width="150px">
+                                <a href="http://friendseat.com/" target="_blank">
+                                    <img src="/images/logo-friendseat.png" alt="" style="margin-top: 40px;" width="150px">
+                                </a>
                             </div>
                              <div class="col-md-3 text-center client">
-                                <img src="/images/logo-asu.png" alt="" style=" width: 100px; margin-top: 40px;">
+                                <a href="http://asu.edu.ph/"  targe="_blank">
+                                    <img src="/images/logo-asu.png" alt="" style=" width: 100px; margin-top: 40px;">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -433,7 +447,7 @@
                                         <div class="skill-item">
                                             <div class="row">
                                                 <div class="col-md-6 col-xs-6 text-sm">
-                                                    Commited
+                                                    Committed
                                                 </div>
                                                 <div class="col-md-6 col-xs-6 " >
                                                     <i class="fa fa-circle"></i>
@@ -865,7 +879,7 @@
                                 <img src="/images/thumb-manaty.png" alt=""  class="img-fluid">
                             </slide>
                              <slide>
-                                <img src="/images/thumb-letswander.png" alt=""  class="img-fluid">
+                                <img src="/images/thumb-letswande.jpeg" alt=""  class="img-fluid">
                             </slide>
                             <slide>
                                 <img src="/images/thumb-friendseat.png" alt="" class="img-fluid">
@@ -906,10 +920,10 @@
                                 <div class="title"> Website Development</div>
                                 <div class="content">
                                         <p>
-                                            I create a lasting impressions both visually and interactiveley with just the functionality you need.
+                                            A site with lasting impressions both visually and interactively with just the functionality you need.
                                         </p>
                                         <p>
-                                            With my skills, experience and expertise in web development I am capable to help you create a website that are custom tailored to your specific industry needs
+                                            With my experience and expertise in web development I am capable to help you create a website that are custom tailored to your specific industry needs.
                                         </p>
                                 </div>
                             </div>
@@ -920,11 +934,10 @@
                                 <div class="title"> Website App Development </div>
                                 <div class="content">
                                      <p>
-                                        I create optimize web apps for any device which is critical when your target audience uses a tablet or smartphone. A code that adapt automatically, for an amazing experience regardless of device size.
+                                        I am capable of creating a web applications that are easy to maintain, cost-effective and high quality.
                                     </p>
                                     <p>
-                                        I am capable of creating a web-apps  that is easy to maintain, cost-effective and high quality
-                                    </p>
+                                        I create optimize web applications for any device which is critical when your target audience uses a tablet or smartphone. A code that adapt automatically, for an amazing experience regardless of device size.                                    </p>
                                 </div>
                             </div>
                         </div>

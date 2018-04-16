@@ -1,10 +1,16 @@
 <template>
   <div class="container">
     <div class="row padded-14">
-      <a href="http://herbert-saladar.com/" class="text-center" style="width:100%">
-        <div  style="background:url(/images/me-gray.png)  no-repeat; width:90px; height: 90px; background-size:cover; border-radius:100px; background-position: -14px;" class="float-left"></div>
-        <img src="/images/logo-airbit.png" alt="float-right" width="90px;">
-      </a>
+      <div class="col-md-6"> 
+        <a href="http://herbert-saladar.com/" targe="_blank" class="float-left" style="width:100%">
+          <div  style="background:url(/images/me-gray.png)  no-repeat; width:90px; height: 90px; background-size:cover; border-radius:100px; background-position: -14px;"></div>
+        </a>
+      </div>
+      <div class="col-md-6"> 
+        <a href="https://www.bitbackoffice.com/" targe="_blank" class="float-right">
+            <img src="/images/logo-airbit.png" class="float-right" width="90px;">
+        </a>
+      </div>
     </div>
     <div class="row padded-14">
       <div class="col-md-12 warning text-center text-lg margin-bottom padded" >
@@ -227,11 +233,14 @@
               <div class="modal-body">
                 <slot name="body">
                   <p>
-                    If you find this helpful please dont hesitate to send your feedback by clicking <a href="http://herbert-saladar.com/"> here </a> or a donation and send to
-                    Airbit account <strong> hrbrt-01 </strong> to support future projects
-                   </p>
+                    Airbit tool is a Free web application and is made available free of charge. 
+                  </p>
+                  <p>
+                  If you find this helpful on your demo/presentation and personal use please consider a donation to my airbit account <strong> hrbrt-01 </strong> to support this and future projects.
+                  </p>
+                  <p> Also don't hesitate to send me your feedback and requests here <a href="http://herbert-saladar.com/"> here </a> </p>
                    <p> 
-                    Thank you! 
+                    Thank you! <i class="fa fa-smile-o"></i>
                   </p>
                 </slot>
               </div>
@@ -329,7 +338,7 @@ export default {
      }
 
      setTimeout( function(){
-     //  vm.showModal =  true 
+       vm.showModal =  true 
      }, 5000)
 
       $('html, body').animate({
@@ -523,7 +532,7 @@ a {
 }
 
 .modal-container {
-  width: 300px;
+  width: 80%;
   margin: 0px auto;
   padding: 20px 30px;
   background-color: #fff;
