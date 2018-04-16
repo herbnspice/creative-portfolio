@@ -4,6 +4,38 @@
       <div class="col-md-12 warning text-center text-lg margin-bottom padded" >
           Disclaimer: This tool is only for demo and reference, all values are speculative, figures does not represent actual values.
       </div>
+     <div class="modal"> 
+      this is a modal
+     </div>
+
+      <div class="row padded-14">
+        <div class="form-group col-md-3">
+          <label for="numberOfAccounts">Select of Memberships Type</label>
+            <select name="accounts" v-model="accountType" class="form-control" v-on:change="getDays()">
+              <option value="exec"> Executive </option>
+              <option value="corp"> Corporate </option>
+              <option value="pro">  Pro </option>
+              <option value="silver">  Silver </option>
+              <option value="gold">Gold </option>
+              <option value="platinum">  Platinum </option>
+            </select>
+        </div>
+        <div class="form-group col-md-3">
+            <label for="numberOfAccounts">Number of Accounts </label>
+            <input type="text" name="numberOfAccounts" class="form-control" placeholder="Number of Accounts" v-model="numberOfAccounts">
+        </div>
+          <div class="form-group col-md-3">
+            <label for="minRewards">Enter Minimum Daily Rewards </label>
+            <input type="text" name="minRewards" class="form-control" placeholder="Minimum Daily Rewards" v-model="minRewards">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="maxRewards">Enter Maximum Daily Rewards </label>
+            <input type="text" name="maxRewards" class="form-control" placeholder="Minimum Daily Rewards" v-model="maxRewards">
+        </div>
+        <div class="form-group col-md-12 text-center">
+          <button class="btn btn-success " @click="generate()"> Generate </button>
+        </div>
+      </div>
       <div class="col-md-6 center padded-top-30 bitcoin-container">
         <span class="text-xl "> 1 Bitcoin =  ${{bitcoinprice}} </span>
       </div>
@@ -77,7 +109,7 @@
               </div>
           </div>
         </div>
-        <div class="row padded-14">
+        <div class="row padded-14 total-income">
           <div class="col-md-12 padded-top bordered">
             <h4 class="float-right"> Total Income ${{ parseFloat( ( rewardsTotal - ( rewardsTotal * .35 ) )* numberOfAccounts ).toLocaleString('en-US') }}</h4>
           </div>
@@ -103,9 +135,7 @@
                   </span>
                 </div>
                 <div class="col-md-4">
-                ${{  parseFloat( 
-                 ( ( rewardsTotal - ( rewardsTotal * .35 ) ) * numberOfAccounts ) - 
-                  (investment * numberOfAccounts) ).toLocaleString('en-US')  }}
+                ${{  ( rewardsTotal != 0  ? parseFloat( ( ( rewardsTotal - ( rewardsTotal * .35 ) ) * numberOfAccounts ) - (investment * numberOfAccounts) ).toLocaleString('en-US') : 0 )  }}
                 </div>
               </div>
                <div class="row">
@@ -115,7 +145,7 @@
                   </span>
                 </div>
                 <div class="col-md-4">
-                {{  parseFloat(( ( ( rewardsTotal - ( rewardsTotal * .35 ) ) * numberOfAccounts ) - (investment * numberOfAccounts) ) * 100 /(investment * numberOfAccounts) ).toLocaleString('en-US')  }}%
+                {{ ( rewardsTotal != 0  ? parseFloat(( ( ( rewardsTotal - ( rewardsTotal * .35 ) ) * numberOfAccounts ) - (investment * numberOfAccounts) ) * 100 /(investment * numberOfAccounts) ).toLocaleString('en-US') : 0 ) }}%
                 </div>
               </div>
 
@@ -155,34 +185,7 @@
           </div>
       </div>
     </div>
-     <div class="row padded-14">
-          <div class="form-group col-md-3">
-            <label for="numberOfAccounts">Select of Memberships Type</label>
-              <select name="accounts" v-model="accountType" class="form-control" v-on:change="getDays()">
-                <option value="exec"> Executive </option>
-                <option value="corp"> Corporate </option>
-                <option value="pro">  Pro </option>
-                <option value="silver">  Silver </option>
-                <option value="gold">Gold </option>
-                <option value="platinum">  Platinum </option>
-              </select>
-          </div>
-          <div class="form-group col-md-3">
-              <label for="numberOfAccounts">Number of Accounts </label>
-              <input type="text" name="numberOfAccounts" class="form-control" placeholder="Number of Accounts" v-model="numberOfAccounts">
-          </div>
-            <div class="form-group col-md-3">
-              <label for="minRewards">Enter Minimum Daily Rewards </label>
-              <input type="text" name="minRewards" class="form-control" placeholder="Minimum Daily Rewards" v-model="minRewards">
-          </div>
-          <div class="form-group col-md-3">
-              <label for="maxRewards">Enter Maximum Daily Rewards </label>
-              <input type="text" name="maxRewards" class="form-control" placeholder="Minimum Daily Rewards" v-model="maxRewards">
-          </div>
-          <div class="form-group col-md-12 text-center">
-            <button class="btn btn-success " @click="generate()"> Generate </button>
-          </div>
-    </div>
+ 
     <div class="row">  
       <div class="col-md-2 text-center">Date </div>
       <div class="col-md-5 text-center">Description </div>
@@ -204,15 +207,53 @@
       <div class="col-md-2 text-lg text-right">${{ rewardsTotal.toLocaleString('en-US')  }}</div>
       <div class="col-md-2 text-lg text-right">${{ (rewardsTotal * .35 ).toLocaleString('en-US')  }} </div>
     </div>
+
+    
+  <button id="show-modal" @click="showModal = true">Show Modal</button>
+    <div v-if="showModal" >
+        <div class="modal-mask " >
+          <div class="modal-wrapper">
+            <div class="modal-container">
+
+              <div class="modal-header">
+                <slot name="header">
+                <h2> Greetings! </h2> 
+                </slot>
+              </div>
+              <div class="modal-body">
+                <slot name="body">
+                  <p>
+                    If you find this helpful please dont hesitate to send your feedback by clicking <a href="http://herbert-saladar.com/"> here </a> or a donation and send to
+                    Airbit account <strong> hrbrt-01 </strong> to support future projects
+                   </p>
+                   <p> 
+                    Thank you! 
+                  </p>
+                </slot>
+              </div>
+
+              <div class="modal-footer">
+                <slot name="footer">
+                  <button class="btn btn-success" @click="showModal = false"> OK </button>
+                </slot>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
   </div>
 </template>
 
 <script>
+import $ from 'jquery'
+
 export default {
   name: 'ToolAirbit',
   data() {
     return {
       numberOfAccounts : 1,
+      showModal : false,
       minRewards : 7,
       maxRewards : 10,
       generatedData : [],
@@ -282,6 +323,15 @@ export default {
        vm.isRepurchase = true
 
      }
+
+     setTimeout( function(){
+       vm.showModal =  true 
+     }, 5000)
+
+      $('html, body').animate({
+        scrollTop: $(".total-income").offset().top
+      }, 1000);
+
     },
     getDays(){
       switch( this.accountType ){
@@ -450,4 +500,69 @@ a {
 .margin-bottom{
   margin-bottom: 20px;
 }
+
+.modal-mask {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  display: table;
+  transition: opacity .3s ease;
+}
+
+.modal-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.modal-container {
+  width: 300px;
+  margin: 0px auto;
+  padding: 20px 30px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+  transition: all .3s ease;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.modal-header h3 {
+  margin-top: 0;
+  color: #42b983;
+}
+
+.modal-body {
+  margin: 20px 0;
+}
+
+.modal-default-button {
+  float: right;
+}
+
+/*
+ * The following styles are auto-applied to elements with
+ * transition="modal" when their visibility is toggled
+ * by Vue.js.
+ *
+ * You can easily play with the modal transition by editing
+ * these styles.
+ */
+
+.modal-enter {
+  opacity: 0;
+}
+
+.modal-leave-active {
+  opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 </style>
