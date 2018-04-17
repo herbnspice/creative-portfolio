@@ -1,26 +1,22 @@
 <template>
   <div class="container">
     <div class="row padded-14">
-      <div class="col-6 col-sm-4"> 
+      <div class="col-6 col-md-6 col-sm-4"> 
         <a href="http://herbert-saladar.com/" targe="_blank" class="float-left" style="width:100%">
           <div  style="background:url(/images/me-gray.png)  no-repeat; width:90px; height: 90px; background-size:cover; border-radius:100px; background-position: -14px;"></div>
         </a>
       </div>
-      <div class="col-6 col-sm-4"> 
+      <div class="col-6 col-md-6 col-sm-4"> 
         <a href="https://www.bitbackoffice.com/" targe="_blank" class="float-right">
             <img src="/images/logo-airbit.png" class="float-right" width="90px;">
         </a>
       </div>
     </div>
     <div class="row padded-14">
-      <div class="col-md-12 warning text-center text-lg margin-bottom padded" >
-          Disclaimer: This tool is only for demo and reference, all values are speculative, figures does not represent actual values.
-      </div>
-     <div class="modal"> 
-      this is a modal
-     </div>
-
-      <div class="row padded-14">
+      <div class="row padded-14 bordered-gray margin-bottom ">
+        <div class="form-group col-md-12">
+           <h2> Airbit Daily Rewards Generator </h2>
+        </div>
         <div class="form-group col-md-3">
           <label for="numberOfAccounts">Select of Memberships Type</label>
             <select name="accounts" v-model="accountType" class="form-control" v-on:change="getDays()">
@@ -48,6 +44,9 @@
           <button class="btn btn-success " @click="generate()"> Generate </button>
         </div>
       </div>
+       <div class="col-md-12 warning text-center text-xs margin-bottom padded" >
+          Disclaimer: This tool is only for demo and reference, all values are speculative, figures does not represent actual values.
+      </div>
       <div class="col-md-6 center padded-top-30 bitcoin-container">
         <span class="text-xl "> 1 Bitcoin =  ${{bitcoinprice}} </span>
       </div>
@@ -57,19 +56,19 @@
               <span class="text-sm"> REWARDS PROGRAM</span>
               <hr>
           </div>
-          <div class="col-md-6 text-center">
+          <div class="col col-xs-6 col-sm-6  col-md-6 text-center">
               <span class="text-sm">TOTAL</span>
               <div class="clearfix"></div>
-              <span class="text-lg">BUSINESS DAYS</span>
+              <span class="text-lg rewards-label">BUSINESS DAYS</span>
               <div class="clearfix"></div>
               <div class="days">
                 <span class="text-xl">{{ days }}</span> 
              </div>
           </div>
-          <div class="col-md-6 text-center">
+          <div class="col col-xs-6 col-sm-6  col-md-6 text-center">
               <span class="text-sm">TOTAL</span>
               <div class="clearfix"></div>
-              <span class="text-lg">REPURCHASE</span>
+              <span class="text-lg rewards-label">REPURCHASE</span>
               <div class="clearfix"></div>
               <div class="days">
                 <span class="text-xl">{{ repurchase }}</span> 
@@ -83,39 +82,39 @@
         <div class="row">
           <div class="col-md-4 ">
             <div class="wallet savings">
-                <span class="float-left">  Savings Wallet </span>
+                <span class="float-left text-xs">  Savings Wallet </span>
                 <div class="clearfix"></div>
                 <span class="float-right">
                   B {{ parseFloat( savings / bitcoinprinceFloat).toFixed(8) }}
                 </span>
                 <div class="clearfix"></div>
-                <span class="text-xl float-right">
+                <span class="text-lg float-right">
                     ${{savings.toLocaleString('en-US')}}
                 </span>
             </div>
           </div>
           <div class="col-md-4">
             <div class="wallet commission">
-              <span class="float-left"> Commision Wallet </span>
+              <span class="float-left text-xs"> Commision Wallet </span>
               <div class="clearfix"></div>
               <span class="float-right">
                 B {{ parseFloat( comission / bitcoinprinceFloat).toFixed(8) }}
               </span>
               <div class="clearfix"></div>
-              <span class="text-xl float-right">
+              <span class="text-lg float-right">
                   ${{comission.toLocaleString('en-US') }}
               </span>
             </div>
           </div>
           <div class="col-md-4 ">
               <div class="wallet rewards">
-                <span class="float-left"> Rewards Wallet </span>
+                <span class="float-left text-xs"> Rewards Wallet </span>
                 <div class="clearfix"></div>
                 <span class="float-right">
                   B {{ parseFloat( ( rewardsTotal / bitcoinprinceFloat ) * numberOfAccounts ).toFixed(8) }}
                 </span>
                 <div class="clearfix"></div>
-                <span class="text-xl float-right">
+                <span class="text-lg float-right">
                   ${{ ( rewardsTotal  * numberOfAccounts ).toLocaleString('en-US') }}
                 </span>
               </div>
@@ -131,65 +130,65 @@
         <div class="col-md-12">
             <div class="wallet info">
               <div class="row">
-                <div class="col-md-8">
+                <div class="col col-xs-8 col-md-8">
                   <span class="text-xs">
                     Total Investment
                   </span>
                 </div>
-                <div class="col-md-4">
+                <div class="col col-xs-4 col-md-4 text-xs  ">
                   ${{  parseInt(investment * numberOfAccounts ).toLocaleString('en-US') }}
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-8">
+                <div class="col col-xs-8 col-md-8">
                   <span class="text-xs">
                     Growth
                   </span>
                 </div>
-                <div class="col-md-4">
+                <div class="col col-xs-4  col-md-4 text-xs">
                 ${{  ( rewardsTotal != 0  ? parseFloat( ( ( rewardsTotal - ( rewardsTotal * .35 ) ) * numberOfAccounts ) - (investment * numberOfAccounts) ).toLocaleString('en-US') : 0 )  }}
                 </div>
               </div>
                <div class="row">
-                <div class="col-md-8">
+                <div class="col col-xs-8 col-md-8">
                   <span class="text-xs">
                     Growth %
                   </span>
                 </div>
-                <div class="col-md-4">
+                <div class="col col-xs-4 col-md-4 text-xs">
                 {{ ( rewardsTotal != 0  ? parseFloat(( ( ( rewardsTotal - ( rewardsTotal * .35 ) ) * numberOfAccounts ) - (investment * numberOfAccounts) ) * 100 /(investment * numberOfAccounts) ).toLocaleString('en-US') : 0 ) }}%
                 </div>
               </div>
 
               <hr>
               <div class="row">
-                <div class="col-md-8">
+                <div class="col col-xs-8 col-md-8">
                   <span class="text-xs">
                     Income/Account
                   </span>
                 </div>
-                <div class="col-md-4">
+                <div class="col col-xs-4 col-md-4 text-xs">
                 ${{  parseFloat(rewardsTotal - (rewardsTotal * .35 )) .toLocaleString('en-US')  }}
                 </div>
               </div>
               <hr>
               <div class="row">
-                <div class="col-md-8">
+                <div class=" col col-xs-8 col-md-8 ">
                   <span class="text-xs">
                     Repurchase fee
                   </span>
                 </div>
-                <div class="col-md-4">
+                <div class="col col-xs-4 col-md-4 text-xs">
                 ${{  parseFloat( rewardsTotal * .35  ).toLocaleString('en-US') }}
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-8 col col-xs-8">
                   <span class="text-xs">
                     Total Repurchase fee account
                   </span>
                 </div>
-                <div class="col-md-4">
+                <div class="col col-xs-4 col-md-4 text-xs">
                 ${{  parseFloat( rewardsTotal * .35 * numberOfAccounts ).toLocaleString('en-US')  }}
                 </div>
               </div>
@@ -198,26 +197,26 @@
       </div>
     </div>
  
-    <div class="row">  
-      <div class="col-md-2 text-center">Date </div>
-      <div class="col-md-5 text-center">Description </div>
-      <div class="col-md-2 text-center">Credit</div>
-       <div class="col-md-2 text-center">Repurchase </div>
+    <div class="row padded-top">  
+      <div class="col col-md-2 col-xs-2 text-center">Date </div>
+      <div class="col col-md-5 col-xs-5  text-center">Description </div>
+      <div class="col col-md-2 col-xs-2  text-center">Credit</div>
+      <div class="col col-md-2 col-xs-2  text-center">Repurchase </div>
     </div>
     <div v-for="key in generatedData" class="row generate-row" :class="{ 'bg-green':key.repurchased }">
-      <div class="col-md-2"> Day {{ key.date }}</div>
-      <div class="col-md-5">
+      <div class="col col-md-2 col-xs-2"> Day {{ key.date }}</div>
+      <div class="col col-md-5 col-xs-5">
           Reward Bonus has been <span v-if="key.repurchased"> Debited </span> <span v-if="!key.repurchased"> Credited </span>to your rewards wallet  
       </div>
-      <div class="col-md-2 text-right"> <span v-if="!key.repurchased"> ${{ key.rewards }} </span> </div>
-      <div class="col-md-2 text-right"> <span>${{ parseFloat(key.repurchasedvalue).toFixed(2) }} </span> </div>
+      <div class="col col-md-2 col-xs-2 text-right"> <span v-if="!key.repurchased"> ${{ key.rewards }} </span> </div>
+      <div class="col col-md-2 col-xs-2 text-right"> <span>${{ parseFloat(key.repurchasedvalue).toFixed(2) }} </span> </div>
      
     </div>
     <div class="row">
-      <div class="col-md-2 text-center">&nbsp;</div>
-      <div class="col-md-5 text-center">&nbsp;</div>
-      <div class="col-md-2 text-lg text-right">${{ rewardsTotal.toLocaleString('en-US')  }}</div>
-      <div class="col-md-2 text-lg text-right">${{ (rewardsTotal * .35 ).toLocaleString('en-US')  }} </div>
+      <div class="col col-md-2 col-xs-2 text-center">&nbsp;</div>
+      <div class="col col-md-5 col-xs-5 text-center">&nbsp;</div>
+      <div class="col col-md-2 col-xs-2 text-lg text-right">${{ rewardsTotal.toLocaleString('en-US')  }}</div>
+      <div class="col col-md-2 col-xs-2 text-lg text-right">${{ (rewardsTotal * .35 ).toLocaleString('en-US')  }} </div>
     </div>
 
     <div v-if="showModal" >
@@ -338,7 +337,7 @@ export default {
      }
 
      setTimeout( function(){
-       vm.showModal =  true 
+      // vm.showModal =  true 
      }, 5000)
 
       $('html, body').animate({
@@ -457,6 +456,15 @@ a {
   font-weight: 500;
   color:black;
 }
+
+label {
+  font-size:10px;
+  min-height: 24px;
+}
+.rewards-label{
+  display: inline-block;
+  min-height: 80px;
+}
 .bitcoin-container{
   background-color: #384555;
   padding-top:90px;
@@ -489,6 +497,9 @@ a {
 }
 .bordered {
   border: solid thin black;
+}
+.bordered-gray{
+  border: solid thin #59d7be;
 }
 .wallet.savings{
   border-top-color: red !important;
