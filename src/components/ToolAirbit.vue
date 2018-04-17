@@ -44,8 +44,11 @@
           <button class="btn btn-success " @click="generate()"> Generate </button>
         </div>
       </div>
-       <div class="col-md-12 warning text-center text-xs margin-bottom padded" >
+       <div class="col-md-12 warning text-left text-xs margin-bottom" >
           Disclaimer: This tool is only for demo and reference, all values are speculative, figures does not represent actual values.
+      </div>
+       <div class="col-md-12 notice text-left text-xs margin-bottom" >
+          Soon: Binary Tree Generator Tool.
       </div>
       <div class="col-md-6 center padded-top-30 bitcoin-container">
         <span class="text-xl "> 1 Bitcoin =  ${{bitcoinprice}} </span>
@@ -520,6 +523,12 @@ label {
 .warning{
   background-color:red;
   color:white;
+  padding:10px;
+}
+.notice{
+  background-color:green;
+  color:white;
+  padding:10px;
 }
 .margin-bottom{
   margin-bottom: 20px;
