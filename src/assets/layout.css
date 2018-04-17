@@ -311,6 +311,14 @@ section .container .row{
 .clients{
 	min-height: 650px;
 }
+
+.client{
+	opacity: 0.5;
+}
+.client:hover{
+	opacity: 1;
+	transition: all .5s ease
+}
 /*
 	SECTION  SKILLS
 */

@@ -93,7 +93,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row" >
+                        <div class="row" style="padding-top:30px;">
                             <div class="col-md-4 text-center client">
                                 <a href="http://virginmobile.mx/" targe="_blank">
                                     <img src="/images/logo-virgin-mobile-mexico.png" alt="" style="margin-top: 40px;">

@@ -124,7 +124,10 @@
           </div>
         </div>
         <div class="row padded-14 total-income">
-          <div class="col-md-12 padded-top bordered">
+          <div class="col-md-12 padded-top bordered" v-if="accountType == 'silver' || accountType == 'gold' || accountType == 'platinum' ">
+            <h5 class="float-right"> Total Income ${{ parseFloat( rewardsTotal * numberOfAccounts ).toLocaleString('en-US') }}</h5>
+          </div>
+          <div class="col-md-12 padded-top bordered" v-if="accountType == 'pro' || accountType == 'exec' || accountType == 'corp' ">
             <h5 class="float-right"> Total Income ${{ parseFloat( ( rewardsTotal - ( rewardsTotal * .35 ) )* numberOfAccounts ).toLocaleString('en-US') }}</h5>
           </div>
          </div>
@@ -148,8 +151,11 @@
                     Growth
                   </span>
                 </div>
-                <div class="col col-xs-4  col-md-4 text-xs">
-                ${{  ( rewardsTotal != 0  ? parseFloat( ( ( rewardsTotal - ( rewardsTotal * .35 ) ) * numberOfAccounts ) - (investment * numberOfAccounts) ).toLocaleString('en-US') : 0 )  }}
+                <div class="col col-xs-4  col-md-4 text-xs"  v-if="accountType == 'silver' || accountType == 'gold' || accountType == 'platinum' ">
+                  ${{  ( rewardsTotal != 0  ? parseFloat( ( rewardsTotal * numberOfAccounts ) - (investment * numberOfAccounts) ).toLocaleString('en-US') : 0 )  }}
+                </div>
+                <div class="col col-xs-4  col-md-4 text-xs"  v-if="accountType == 'pro' || accountType == 'exec' || accountType == 'corp' ">
+                  ${{  ( rewardsTotal != 0  ? parseFloat( ( ( rewardsTotal - ( rewardsTotal * .35 ) ) * numberOfAccounts ) - (investment * numberOfAccounts) ).toLocaleString('en-US') : 0 )  }}
                 </div>
               </div>
                <div class="row">
@@ -158,7 +164,10 @@
                     Growth %
                   </span>
                 </div>
-                <div class="col col-xs-4 col-md-4 text-xs">
+                <div class="col col-xs-4  col-md-4 text-xs"  v-if="accountType == 'silver' || accountType == 'gold' || accountType == 'platinum' ">
+                {{ ( rewardsTotal != 0  ? parseFloat(( ( rewardsTotal  * numberOfAccounts ) - (investment * numberOfAccounts) ) * 100 /(investment * numberOfAccounts) ).toLocaleString('en-US') : 0 ) }}%
+                </div>
+                <div class="col col-xs-4  col-md-4 text-xs"  v-if="accountType == 'pro' || accountType == 'exec' || accountType == 'corp' ">
                 {{ ( rewardsTotal != 0  ? parseFloat(( ( ( rewardsTotal - ( rewardsTotal * .35 ) ) * numberOfAccounts ) - (investment * numberOfAccounts) ) * 100 /(investment * numberOfAccounts) ).toLocaleString('en-US') : 0 ) }}%
                 </div>
               </div>
@@ -181,7 +190,9 @@
                     Repurchase fee
                   </span>
                 </div>
-                <div class="col col-xs-4 col-md-4 text-xs">
+                
+                <div class="col col-xs-4 col-md-4 text-xs" v-if="accountType == 'silver' || accountType == 'gold' || accountType == 'platinum' "> $ 0.00  </div>
+                <div class="col col-xs-4 col-md-4 text-xs" v-if="accountType == 'pro' || accountType == 'exec' || accountType == 'corp' ">
                 ${{  parseFloat( rewardsTotal * .35  ).toLocaleString('en-US') }}
                 </div>
               </div>
@@ -191,7 +202,8 @@
                     Total Repurchase fee account
                   </span>
                 </div>
-                <div class="col col-xs-4 col-md-4 text-xs">
+                <div class="col col-xs-4 col-md-4 text-xs" v-if="accountType == 'silver' || accountType == 'gold' || accountType == 'platinum' "> $ 0.00  </div>
+                <div class="col col-xs-4 col-md-4 text-xs" v-if="accountType == 'pro' || accountType == 'exec' || accountType == 'corp' ">
                 ${{  parseFloat( rewardsTotal * .35 * numberOfAccounts ).toLocaleString('en-US')  }}
                 </div>
               </div>
@@ -219,7 +231,9 @@
       <div class="col col-md-2 col-xs-2 text-center">&nbsp;</div>
       <div class="col col-md-5 col-xs-5 text-center">&nbsp;</div>
       <div class="col col-md-2 col-xs-2 text-lg text-right">${{ rewardsTotal.toLocaleString('en-US')  }}</div>
-      <div class="col col-md-2 col-xs-2 text-lg text-right">${{ (rewardsTotal * .35 ).toLocaleString('en-US')  }} </div>
+      <div class="col col-md-2 col-xs-2 text-lg text-right" v-if="accountType == 'pro' || accountType == 'exec' || accountType == 'corp' ">${{ (rewardsTotal * .35 ).toLocaleString('en-US')  }} </div>
+      <div class="col col-md-2 col-xs-2 text-lg text-right" v-if="accountType == 'silver' || accountType == 'gold' || accountType == 'platinum' "> $ 0.00  </div>
+
     </div>
 
     <div v-if="showModal" >
