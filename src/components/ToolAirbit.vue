@@ -14,7 +14,7 @@
     </div>
     <div class="row padded-14">
       <div class="row padded-14 bordered-gray margin-bottom ">
-        <div class="form-group col-md-12">
+        <div class="form-group col-md-12 top">
            <h2> Airbit Daily Rewards Generator </h2>
         </div>
         <div class="form-group col-md-3">
@@ -135,6 +135,36 @@
       <div class="col-md-4">
         <div class="col-md-12">
             <div class="wallet info">
+               <div class="row">
+                <div class="col col-xs-8 col-md-8">
+                  <span class="text-xs">
+                    Membership
+                  </span>
+                </div>
+                <div class="col col-xs-4 col-md-4 text-xs  ">
+                    {{ accountType.toUpperCase() }}
+                </div>
+              </div>
+               <div class="row">
+                <div class="col col-xs-8 col-md-8">
+                  <span class="text-xs">
+                    Investment
+                  </span>
+                </div>
+                <div class="col col-xs-4 col-md-4 text-xs  ">
+                    ${{ investment.toLocaleString('en-US') }}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-xs-8 col-md-8">
+                  <span class="text-xs">
+                    No. Of Accounts
+                  </span>
+                </div>
+                <div class="col col-xs-4 col-md-4 text-xs  ">
+                    {{ numberOfAccounts }}
+                </div>
+              </div>
               <div class="row">
                 <div class="col col-xs-8 col-md-8">
                   <span class="text-xs">
@@ -207,6 +237,11 @@
                 ${{  parseFloat( rewardsTotal * .35 * numberOfAccounts ).toLocaleString('en-US')  }}
                 </div>
               </div>
+              <div class="row text-center">
+                <div class="col-12 col-md-12">
+                  <button class="btn btn-success" @click="scrollUp()" > Scroll Up </button>
+                </div>
+              </div>
            </div>
           </div>
       </div>
@@ -234,6 +269,11 @@
       <div class="col col-md-2 col-xs-2 text-lg text-right" v-if="accountType == 'pro' || accountType == 'exec' || accountType == 'corp' ">${{ (rewardsTotal * .35 ).toLocaleString('en-US')  }} </div>
       <div class="col col-md-2 col-xs-2 text-lg text-right" v-if="accountType == 'silver' || accountType == 'gold' || accountType == 'platinum' "> $ 0.00  </div>
 
+    </div>
+    <div class="row text-center">
+      <div class="col-12 col-md-12">
+        <button class="btn btn-success" @click="scrollUp()" > Scroll Up </button>
+      </div>
     </div>
 
     <div v-if="showModal" >
@@ -361,6 +401,11 @@ export default {
         scrollTop: $(".total-income").offset().top
       }, 1000);
 
+    },
+    scrollUp(){
+       $('html, body').animate({
+        scrollTop: $(".top").offset().top
+      }, 1000);
     },
     getDays(){
       switch( this.accountType ){
