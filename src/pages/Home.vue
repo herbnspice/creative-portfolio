@@ -838,7 +838,7 @@
                                                             <div class="col-md-2">
                                                                 <i class="fa fa-check"></i>
                                                             </div>
-                                                            <div class="col-md-10">Founded and Supervised iPixel a Stundent Orgranization for IT students</div> 
+                                                            <div class="col-md-10">Founded and Supervised iPixel a Stundent Organization for IT students</div> 
                                                         </div>
                                                     </div>
                                                 </li>
