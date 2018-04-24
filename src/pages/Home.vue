@@ -454,7 +454,7 @@
                                                     <i class="fa fa-circle"></i>
                                                     <i class="fa fa-circle"></i> 
                                                     <i class="fa fa-circle"></i> 
-                                                    <i class="fa fa-circle gray"></i> 
+                                                    <i class="fa fa-circle "></i> 
                                                 </div>
                                             </div>
                                         </div>
@@ -498,7 +498,7 @@
                                                 <a href="http://socialdraft.com" target="_blank">
                                                 <img src="/images/logo-virgin-mobile-mexico.png" alt="" width="150px"> <br>Virgin Mobile Mexico </a> </strong><br>Web Development / Sr. Front End Engineer (2017 - Present) </span>
                                             </div>
-                                            <p>Virgin Mobile Mexico is a wireless communications brand used in Mexico. My responsibilities are but not limitted to the following:
+                                            <p>Virgin Mobile Mexico is a wireless communications brand used in Mexico. My responsibilities are but not limited to the following:
                                                 <ol class="list">
                                                     <li> 
                                                     <div class="col-md-12">
@@ -506,7 +506,7 @@
                                                             <div class="col-md-2">
                                                                 <i class="fa fa-check"></i>
                                                             </div>
-                                                            <div class="col-md-10"> Lead Web Developer, handles the developement of the application product core features</div> 
+                                                            <div class="col-md-10"> Lead Web Developer, handles the development of the application product core features</div> 
                                                         </div>
                                                     </div>
                                                 </li>
@@ -564,7 +564,7 @@
                                                 <img src="/images/logo-manaty.png" alt="" width="150px"><br>
                                                 Manaty </a> </strong> <br> Web Developer (2017 - 2018) </span>
                                             </div>
-                                            <p> Manaty is a group of experts committed to design, realize and maintain stable, scalable, performant and secure enterprise apps.  My responsibilities are but not limitted to the following: 
+                                            <p> Manaty is a group of experts committed to design, realize and maintain stable, scalable, performant and secure enterprise apps.  My responsibilities are but not limited to the following: 
                                                 <ol class="list">
                                                     <li> 
                                                     <div class="col-md-12">
@@ -572,7 +572,7 @@
                                                             <div class="col-md-2">
                                                                 <i class="fa fa-check"></i>
                                                             </div>
-                                                            <div class="col-md-10">Develop site based on Octber CMS</div> 
+                                                            <div class="col-md-10">Develop site based on October CMS</div> 
                                                         </div>
                                                     </div>
                                                 </li>
@@ -583,7 +583,7 @@
                                                             <div class="col-md-2">
                                                                 <i class="fa fa-check"></i>
                                                             </div>
-                                                            <div class="col-md-10">Integrated the User Infercase and Integrate as User Experience</div> 
+                                                            <div class="col-md-10">Integrated the User Interface and Integrate as User Experience</div> 
                                                         </div>
                                                     </div>
                                                 </li>
@@ -614,7 +614,7 @@
                                                         Socialdraft
                                                     </a> </strong> <br>Sr. Front End Engineer (2012 - 2017) </span>
                                             </div>
-                                            <p> Socialdraft's dashboard allows anyone managing social media pages to easily schedule, re-schedule, and re-cycle posts to social media. It also allows you to see everything from one place, saving you time and making it easy to interact with your audience. My responsibilities are but not limitted to the following: 
+                                            <p> Socialdraft's dashboard allows anyone managing social media pages to easily schedule, re-schedule, and re-cycle posts to social media. It also allows you to see everything from one place, saving you time and making it easy to interact with your audience. My responsibilities are but not limited to the following: 
                                                 <ol class="list">
                                                     <li> 
                                                     <div class="col-md-12">
@@ -622,7 +622,7 @@
                                                             <div class="col-md-2">
                                                                 <i class="fa fa-check"></i>
                                                             </div>
-                                                            <div class="col-md-10"> Lead Developer, handles the developement of the application product core features</div> 
+                                                            <div class="col-md-10"> Lead Developer, handles the development of the application product core features</div> 
                                                         </div>
                                                     </div>
                                                 </li>
@@ -748,7 +748,7 @@
                                                 <img src="/images/logo-maitres.png" alt="" width="150px"><br>
                                                 MaÎtres Cuisiniers de France </a> </strong><br> Developer (2012-2014) </span>
                                             </div>
-                                        <p> A prestigious association of chefs. Maîtres Cuisiniers de France are often given the highest classification in restaurant guides, and are regularly mentioned in the world’s leading food and travel magazines. Many leading chefs, the “Meilleurs Ouvriers de France” and the winners of culinary competitions belong to the Association. In this project, I was assigned to the following
+                                        <p> A prestigious association of chefs. Maîtres Cuisiniers de France are often given the highest classification in restaurant guides, and are regularly mentioned in the world’s leading food and travel magazines. Many leading chefs, the “Meilleurs Ouvriers de France” and the winners of culinary competitions belong to the Association. In this project, I was assigned to the following:
                                                 <ol class="list">
                                                 <li> 
                                                     <div class="col-md-12">
@@ -818,7 +818,7 @@
                                                             <div class="col-md-2">
                                                                 <i class="fa fa-check"></i>
                                                             </div>
-                                                            <div class="col-md-10">Co-Chair on Web Developement Team </div> 
+                                                            <div class="col-md-10">Co-Chair on Web development Team </div> 
                                                         </div>
                                                     </div>
                                                 </li>
@@ -838,7 +838,7 @@
                                                             <div class="col-md-2">
                                                                 <i class="fa fa-check"></i>
                                                             </div>
-                                                            <div class="col-md-10">Founded and Supervised iPixel a Stundent Organization for IT students</div> 
+                                                            <div class="col-md-10">Founded and Supervised iPixel a Student Organization for IT students</div> 
                                                         </div>
                                                     </div>
                                                 </li>
